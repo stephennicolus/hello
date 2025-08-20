@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
-            h1{
-                color:blue;
+<head>
+    <title>Hello</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').onsubmit = function() {
+                //event.preventDefault(); // stop form from reloading the page
+                const name = document.querySelector('#name').value;
+                alert(`Hello, ${name}!`);
             }
-        </style>
-        <title>Hello!</title>
-    </head>
-    <body>
-
-
-
-
-        <h1 >Welcome to my website!</h1>
-
-        <h2>Hello!</h2>
-        Hello,World
-    </body>
-
-
-
+        });
+    </script>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <form>
+        <input autofocus id="name" placeholder="Name" type="text">
+        <input type="submit" value="Submit">
+    </form>
+</body>
 </html>
-
